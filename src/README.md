@@ -1,6 +1,6 @@
-# Strongmind Angular Component Suite #
+# StrongMind Angular Component Suite #
 
-Strongmind styled, html controls, and components (Angular v2.0.0+)
+StrongMind styled, html controls, and components (Angular v2.0.0+)
 
 ## Requirements ##
 * [Angular](https://angular.io) (2.0.0+)
@@ -42,15 +42,15 @@ Add the `sm-angular-numberpicker` directive to the page where you want to use th
 
 Quickest way to use numberpicker
 ```html
-<sm-angular-numberpicker [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<sm-angular-number-picker [(pickerValue)]="pickerValue"></sm-angular-number-picker>
 ```
 Or, to update just some option values
 ```html
-<sm-angular-numberpicker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<sm-angular-number-picker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></sm-angular-number-picker>
 ```
 Or to modify all/any numberpicker options
 ```html
-<sm-angular-numberpicker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<sm-angular-number-picker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></sm-angular-number-picker>
 ```
 
 ### Directive Inputs and Outputs ###
