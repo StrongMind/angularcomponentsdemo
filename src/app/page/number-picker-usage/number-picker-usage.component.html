@@ -1,0 +1,205 @@
+<h3>Demo Usage</h3>
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">Output</th>
+        <th scope="col">Value</th>
+        <th scope="col">Html</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <sm-angular-number-picker [(pickerValue)]="pickerValue1"></sm-angular-number-picker>
+      </td>
+      <td class="text-center">{{pickerValue1}}</td>
+      <td>
+        <code>&lt;sm-angular-number-picker [(pickerValue)]="pickerValue1"&gt;&lt;/sm-angular-number-picker&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <sm-angular-number-picker [numberPickerOptions]="{ min: -20, max: 20, step: 1, showValidation: false }" [(pickerValue)]="pickerValue2"></sm-angular-number-picker>
+      </td>
+      <td class="text-center">{{pickerValue2}}</td>
+      <td>
+          <code>
+            &lt;sm-angular-number-picker<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;[numberPickerOptions]="&#123; min: -20, max: 20, step: 1, showValidation: false &#125;"<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;[(pickerValue)]="pickerValue2"&gt;&lt;/sm-angular-number-picker&gt;
+          </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="row">
+          <div class="col-10">
+            <sm-angular-number-picker [numberPickerOptions]="{ min: 200, max: 400, step: 2, acceptNull: true, buttonCss: 'btn btn-primary' }" [(pickerValue)]="pickerValue3"></sm-angular-number-picker>
+          </div>
+        </div>
+      </td>
+      <td class="text-center">{{pickerValue3}}</td>
+      <td>
+          <code>
+            &lt;sm-angular-number-picker<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;[numberPickerOptions]="&#123; min: 200, max: 400, step: 2, acceptNull: true, buttonCss: 'btn btn-primary' &#125;"<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;[(pickerValue)]="pickerValue3"&gt;&lt;/sm-angular-number-picker&gt;
+          </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <sm-angular-number-picker [numberPickerOptions]="pickerOptions4" [(pickerValue)]="pickerValue4"></sm-angular-number-picker>
+      </td>
+      <td class="text-center">{{pickerValue4}}</td>
+      <td>
+        <code>&lt;sm-angular-number-picker<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;[numberPickerOptions]="pickerOptions4"<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;[(pickerValue)]="pickerValue4"&gt;&lt;/sm-angular-number-picker&gt;</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3>Directive Inputs and Outputs</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Type</th>
+      <th scope="col">Required</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pickerValue</td>
+      <td>(Input) Number</td>
+      <td>Yes</td>
+      <td></td>
+      <td>The value of the number picker from parent component.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions</td>
+      <td>(Input) [NumberPickerOption]</td>
+      <td>No</td>
+      <td>object</td>
+      <td>The strongly typed object to define options for picker.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.min</td>
+      <td>Number</td>
+      <td>No</td>
+      <td>0</td>
+      <td>The minimal number limit on the number picker.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.max</td>
+      <td>Number</td>
+      <td>No</td>
+      <td>100</td>
+      <td>The maximum number limit on the number picker.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.step</td>
+      <td>Number</td>
+      <td>No</td>
+      <td>1</td>
+      <td>The step value for the number picker. 1 by default</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.acceptNull</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>false</td>
+      <td>Defines if the picker should allow the user to leave the input empty, if false, a number will be expected.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.showValidation</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>true</td>
+      <td>Defines if the picker should show validation errors, if false, the input will reset to a previous value on invalid state instead of showing the error.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.showAllErrors</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>false</td>
+      <td>Defines if all errors will be shown on invalid picker state, if false, only the first error will be shown (business value - limited client area).</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.pickerCss</td>
+      <td>String</td>
+      <td>No</td>
+      <td>'input-group'</td>
+      <td>Defines the picker css. Overrideable to add custom styles. The picker follows 'Twitter Bootstrap' standards.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.buttonCss</td>
+      <td>String</td>
+      <td>No</td>
+      <td>'btn btn-secondary'</td>
+      <td>Defines the picker button css.  Overrideable to add custom styles. The picker buttons follow 'Twitter Bootstrap' standards.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.buttonIconDecrease</td>
+      <td>String</td>
+      <td>No</td>
+      <td></td>
+      <td>Defines a picker button icon for decrease. If set, will render icon in decrease button.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.buttonIconIncrease</td>
+      <td>String</td>
+      <td>No</td>
+      <td></td>
+      <td>Defines a picker button icon for increase. If set, will render icon in increase button.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.inputDisabled</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>false</td>
+      <td>Defines if the picker should be disabled for the user if true.</td>
+    </tr>
+    <tr>
+      <td>numberPickerOptions.inputWidth</td>
+      <td>Number</td>
+      <td>No</td>
+      <td></td>
+      <td>Defines a picker inputs specific width.</td>
+    </tr>
+    <tr>
+      <td>
+        <div>numberPickerOptions.errorMessages</div>
+        <div>invalidNumber</div>
+        <div>invalidMin</div>
+        <div>invalidMax</div>
+        <div>invalidStep</div>
+        <div>invalidEmpty</div>
+      </td>
+      <td>
+        <div>NumberPickerErrorMessage</div>
+        <div>String</div>
+        <div>String</div>
+        <div>String</div>
+        <div>String</div>
+        <div>String</div>
+      </td>
+      <td>No</td>
+      <td>
+        <div>object</div>
+      </td>
+      <td>
+        <div>Defines error messages for invalid states.</div>
+        <div>'Invalid Number'</div>
+        <div>'Invalid min value'</div>
+        <div>'Invalid max value'</div>
+        <div>'Invalid step value'</div>
+        <div>'Value cannot be empty'</div>
+      </td>
+    </tr>
+  </tbody>
+</table>  
+

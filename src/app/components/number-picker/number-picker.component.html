@@ -1,0 +1,24 @@
+<ng-container>
+<span [ngClass]="numberPickerOptions.pickerCss">	
+	<span class="input-group-btn">
+		<button [ngClass]="numberPickerOptions.buttonCss" (click)="decreaseValue()">
+				<span *ngIf="!numberPickerOptions.buttonIconDecrease">-</span>
+				<span *ngIf="numberPickerOptions.buttonIconDecrease"><i [ngClass]="numberPickerOptions.buttonIconDecrease"></i></span>
+		</button>
+	</span>
+	<input type="text" class="form-control text-center" [(ngModel)]="pickerValue" [style.max-width.px]="numberPickerOptions.inputWidth"
+		[class.validation-error]="numberPickerOptions.showValidation && numberPickerOptions.getErrors().length > 0" [class.input-disabled]="numberPickerOptions.disabled"
+		(blur)="onBlur($event)" (keydown)="keydown($event)" (keypress)="keypress($event)" [disabled]="numberPickerOptions.inputDisabled"/>	
+	<span class="input-group-btn">
+		<button [ngClass]="numberPickerOptions.buttonCss" (click)="increaseValue()">
+			<span *ngIf="!numberPickerOptions.buttonIconIncrease">+</span>
+			<span *ngIf="numberPickerOptions.buttonIconIncrease"><i [ngClass]="numberPickerOptions.buttonIconIncrease"></i></span>
+		</button>
+	</span>
+</span>
+<div *ngIf="numberPickerOptions.showValidation" class="">
+	<span class="validation-error-message" *ngFor="let error of numberPickerOptions.getErrors()">
+		{{error}}
+	</span>
+</div>
+</ng-container>

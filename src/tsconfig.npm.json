@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "../dist",
+    "outDir": "./app/dist",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -9,7 +9,7 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types"
+      "../node_modules/@types"
     ],
     "lib": [
       "es2017",
@@ -17,7 +17,15 @@
     ]
   },
   "exclude": [
-    "src/app/components.d.ts",
-    "src/app/components.ts"
+    "./environments",
+    "./main.ts",
+    "./polyfills.ts",
+    "./test.ts",
+    "./app/app.component.css",
+    "./app/app.component.html",
+    "./app/app.component.spec.ts",
+    "./app/app.component.ts",
+    "./app/app.module.ts",
+    "./app/page/**"
   ]
 }

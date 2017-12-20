@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #212329;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 1.20rem;
+}
