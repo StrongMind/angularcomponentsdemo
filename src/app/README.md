@@ -19,7 +19,7 @@ Import desired [components] in your `app.module` and add it to the declarations 
 Alternatively, you can import desired [components] to a shared module, to make it available across all modules in your Angular application.
 
 ## Example usage (NumberPickerComponent) ##
-```javascript/typescript
+```typescript
 ...
 import { NumberPickerComponent } from 'sm-angular-component-suite/components';
 import { AppComponent } from './app.component';
@@ -54,7 +54,7 @@ Or to modify all/any numberpicker options
 ```
 
 ### Directive Inputs and Outputs ###
-```html
+
 | Attribute        | Type             | Required  | Default   | Description       |
 | :------------- |:-------------| :-----: | :-----: | :----------- |
 | pickerValue	| (Input) Number | Yes | | The value of the number picker from parent component. |
@@ -77,7 +77,6 @@ Or to modify all/any numberpicker options
 | invalidMax | String | No | | 'Invalid max value' |
 | invalidStep | String | No | |'Invalid step value' |
 | invalidEmpty | String | No | | 'Value cannot be empty' |
-```
 
 [npm-url]: https://npmjs.org/package/sm-angular-component-suite
 [github-url]: https://github.com/StrongMind/angularcomponentsdemo

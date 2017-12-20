@@ -9,6 +9,7 @@
     "typescript",
     "number picker"
   ],
+  "readme": "./README.md",
   "dependencies": {},
   "devDependencies": {},
   "author": "Strongmind - Night's Watch Team",
