@@ -1,7 +1,7 @@
 {
   "name": "sm-angular-component-suite",
   "description": "Strongmind styled, html controls, and components (Angular v2.0.0+)",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "license": "MIT",
   "keywords": [
     "strongmind",
@@ -9,6 +9,7 @@
     "typescript",
     "number picker"
   ],
+  "scripts": {},
   "dependencies": {},
   "devDependencies": {},
   "author": "Strongmind - Night's Watch Team",
