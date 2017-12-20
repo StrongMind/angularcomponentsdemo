@@ -1,2 +1,9 @@
 node_modules
 src
+page
+environments
+main.*
+polyfills.*
+test.*
+app/app.component.*
+app/app.module.*

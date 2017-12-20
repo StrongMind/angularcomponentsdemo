@@ -14,17 +14,5 @@
       "es2017",
       "dom"
     ]
-  },
-  "exclude": [
-    "./environments",
-    "./main.ts",
-    "./polyfills.ts",
-    "./test.ts",
-    "./app/app.component.css",
-    "./app/app.component.html",
-    "./app/app.component.spec.ts",
-    "./app/app.component.ts",
-    "./app/app.module.ts",
-    "./app/page/**"
-  ]
+  }
 }
