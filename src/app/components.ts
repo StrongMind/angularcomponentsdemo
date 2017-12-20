@@ -1,6 +1,6 @@
-import * as NumberPicker from './components/number-picker/number-picker.component';
+import { NumberPickerComponent } from './components/number-picker/number-picker.component';
 
-export { NumberPicker };
+export { NumberPickerComponent };
 
 // export declare class NumberPickerComponent {
 
