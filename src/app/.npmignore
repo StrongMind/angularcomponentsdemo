@@ -3,3 +3,4 @@ src
 page
 app.component.*
 app.module.ts
+**/*.spec.ts
