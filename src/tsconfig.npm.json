@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./app/dist",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
