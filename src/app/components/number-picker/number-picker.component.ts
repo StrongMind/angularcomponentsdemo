@@ -2,8 +2,58 @@ import { Component, EventEmitter, Input, OnInit, Output, OnChanges } from '@angu
 
 @Component({
   selector: 'sm-angular-number-picker',
-  templateUrl: './number-picker.component.html',
-  styleUrls: ['./number-picker.component.css']
+  template: `
+    <span [ngClass]="numberPickerOptions.pickerCss">
+        <span class="input-group-btn">
+            <button [ngClass]="numberPickerOptions.buttonCss" (click)="decreaseValue()">
+                    <span *ngIf="!numberPickerOptions.buttonIconDecrease">-</span>
+                    <span *ngIf="numberPickerOptions.buttonIconDecrease"><i [ngClass]="numberPickerOptions.buttonIconDecrease"></i></span>
+            </button>
+        </span>
+        <input type="text" class="form-control text-center" [(ngModel)]="pickerValue" [style.max-width.px]="numberPickerOptions.inputWidth"
+            [class.validation-error]="numberPickerOptions.showValidation && numberPickerOptions.getErrors().length > 0" [class.input-disabled]="numberPickerOptions.disabled"
+            (blur)="onBlur($event)" (keydown)="keydown($event)" (keypress)="keypress($event)" [disabled]="numberPickerOptions.inputDisabled"/>	
+        <span class="input-group-btn">
+            <button [ngClass]="numberPickerOptions.buttonCss" (click)="increaseValue()">
+                <span *ngIf="!numberPickerOptions.buttonIconIncrease">+</span>
+                <span *ngIf="numberPickerOptions.buttonIconIncrease"><i [ngClass]="numberPickerOptions.buttonIconIncrease"></i></span>
+            </button>
+        </span>
+        </span>
+        <div *ngIf="numberPickerOptions.showValidation" class="">
+        <span class="validation-error-message" *ngFor="let error of numberPickerOptions.getErrors()">
+            {{error}}
+        </span>
+    </div>`,
+    styles: [
+        `.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btn-group {
+            margin-right: 0px;
+        }
+        .input-group-btn:not(:first-child) > .btn:first-child, .input-group-btn:not(:first-child) > .btn-group:first-child {
+            margin-left: 0px;
+        }
+        .input-disabled {
+            background-color: #e1e1e1;
+        }
+        .form-control:focus {
+            box-shadow: none;
+        }
+        .btn-secondary {
+            color: #005888;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+        .btn-secondary:focus, .btn-secondary.focus {
+            box-shadow: none;
+        }
+        .validation-error {
+            border-color: #d62828;
+            background-color: #f8dede;
+        }
+        .validation-error-message {
+            color: #a94442;
+        }`
+    ]
 })
 export class NumberPickerComponent implements OnInit {
 	private _pickerValue: any = 0;
