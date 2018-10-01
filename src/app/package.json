@@ -1,7 +1,7 @@
 {
   "name": "sm-angular-component-suite",
   "description": "Strongmind styled, html controls, and components (Angular v2.0.0+)",
-  "version": "0.0.17",
+  "version": "0.0.26",
   "license": "MIT",
   "keywords": [
     "strongmind",

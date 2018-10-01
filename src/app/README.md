@@ -6,7 +6,7 @@ Strongmind styled, html controls, and components (Angular v2.0.0+)
 * [Angular](https://angular.io) (2.0.0+)
 
 ## UI Dependency ##
-* None
+* None (Twitter Bootstrap v3+ - Recommended)
 
 ## Installation ##
 
@@ -38,19 +38,19 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-Add the `sm-angular-numberpicker` directive to the page where you want to use the number picker.
+Add the `strongmind-number-picker` directive to the page where you want to use the number picker.
 
 Quickest way to use numberpicker
 ```html
-<sm-angular-numberpicker [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<strongmind-number-picker [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 Or, to update just some option values
 ```html
-<sm-angular-numberpicker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<strongmind-number-picker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 Or to modify all/any numberpicker options
 ```html
-<sm-angular-numberpicker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></sm-angular-numberpicker>
+<strongmind-number-picker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 
 ### Directive Inputs and Outputs ###

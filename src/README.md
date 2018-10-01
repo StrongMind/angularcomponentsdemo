@@ -38,19 +38,19 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-Add the `sm-angular-numberpicker` directive to the page where you want to use the number picker.
+Add the `strongmind-number-picker` directive to the page where you want to use the number picker.
 
 Quickest way to use numberpicker
 ```html
-<sm-angular-number-picker [(pickerValue)]="pickerValue"></sm-angular-number-picker>
+<strongmind-number-picker [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 Or, to update just some option values
 ```html
-<sm-angular-number-picker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></sm-angular-number-picker>
+<strongmind-number-picker [numberPickerOption]="{ min: 0, max: 20 }" [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 Or to modify all/any numberpicker options
 ```html
-<sm-angular-number-picker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></sm-angular-number-picker>
+<strongmind-number-picker [numberPickerOption]="numberPickerOptions" [(pickerValue)]="pickerValue"></strongmind-number-picker>
 ```
 
 ### Directive Inputs and Outputs ###
