@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, OnInit, Output, OnChanges } from '@angu
             </button>
         </span>
         <input type="text" class="form-control text-center" [(ngModel)]="pickerValue" [style.max-width.px]="numberPickerOptions.inputWidth"
-            [class.validation-error]="numberPickerOptions.showValidation && numberPickerOptions.getErrors().length > 0" [class.input-disabled]="numberPickerOptions.disabled"
+            [class.validation-error]="numberPickerOptions.showValidation && numberPickerOptions.getErrors().length > 0" [class.input-disabled]="numberPickerOptions.inputDisabled"
             (blur)="onBlur($event)" (keydown)="keydown($event)" (keypress)="keypress($event)" [disabled]="numberPickerOptions.inputDisabled"/>	
         <span class="input-group-btn">
             <button class="sm-number-picker-increment" [ngClass]="numberPickerOptions.buttonCss" (click)="increaseValue()">
@@ -96,7 +96,7 @@ export class NumberPickerComponent implements OnInit {
   }
 
   // function to increase value of the component
-  private increaseValue(): void {
+  public increaseValue(): void {
     if (this.numberPickerOptions.inputDisabled) {
       return;
     }
@@ -124,7 +124,7 @@ export class NumberPickerComponent implements OnInit {
   }
 
   // function to decrease value of the component
-  private decreaseValue(): void {
+  public decreaseValue(): void {
     if (this.numberPickerOptions.inputDisabled) {
       return;
     }
@@ -152,7 +152,7 @@ export class NumberPickerComponent implements OnInit {
   }
 
   // function to capture arrow key events from the client
-  private keydown($event: KeyboardEvent): boolean {
+  public keydown($event: KeyboardEvent): boolean {
     let key = $event.keyCode;
 
     if (($event.ctrlKey && $event.shiftKey) || $event.shiftKey) {
@@ -173,7 +173,7 @@ export class NumberPickerComponent implements OnInit {
   }
 
   // function to capture key events from the client
-  private keypress($event: KeyboardEvent): boolean {
+  public keypress($event: KeyboardEvent): boolean {
     let keyList = [8, 45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57]; // backspace/delete, dash/subtract, 0-9 (decimal keycode: 46 not yet supported)
     let key = $event.keyCode;
 
@@ -186,7 +186,7 @@ export class NumberPickerComponent implements OnInit {
     return true;
   }
 
-  private onBlur($event: Event) {
+  public onBlur($event: Event) {
     let isNull = this.pickerValue == "" && this.numberPickerOptions.acceptNull;
     if (isNull) {
       this.setValueChanges(null);
